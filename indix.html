@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen">
+            <h1>🎯 តេស្តចំណេះដឹង</h1>
+            <p class="subtitle">ជ្រើសរើសប្រភេទសំណួរដែលអ្នកចង់តេស្ត</p>
+            <div class="category-select">
+                <button class="category-btn" onclick="startQuiz('general')">
+                    🌍<br>ចំណេះទូទៅ
+                </button>
+                <button class="category-btn" onclick="startQuiz('science')">
+                    🔬<br>វិទ្យាសាស្ត្រ
+                </button>
+                <button class="category-btn" onclick="startQuiz('programming')">
+                    💻<br>Programming
+                </button>
+                <button class="category-btn" onclick="startQuiz('khmer')">
+                    🇰🇭<br>ប្រវត្តិសាស្ត្រខ្មែរ
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="quiz-screen hidden">
+            <div class="quiz-header">
+                <div class="question-counter">
+                    សំណួរ <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+                </div>
+                <div class="score">
+                    ពិន្ទុ: <span id="score">0</span>
+                </div>
+            </div>
+            <div class="question" id="question"></div>
+            <div class="answers" id="answers"></div>
+            <button class="next-btn hidden" id="nextBtn" onclick="nextQuestion()">សំណួរបន្ទាប់ →</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="resultScreen" class="result-screen hidden">
+            <h1>🎉 បញ្ចប់ហើយ!</h1>
+            <div class="result-emoji" id="resultEmoji">🏆</div>
+            <div class="result-score">
+                ពិន្ទុរបស់អ្នក: <span id="finalScore">0</span>/<span id="totalScore">10</span>
+            </div>
+            <div class="result-message" id="resultMessage"></div>
+            <button class="restart-btn" onclick="restart()">ចាប់ផ្តើមឡើងវិញ</button>
+        </div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
